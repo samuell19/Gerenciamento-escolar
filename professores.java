@@ -60,6 +60,10 @@ public class professores {
     public void setTurma(List<turmas> turma) {
         this.turma = turma;
     }
+    @Override
+    public String toString() {
+        return "Professores: "  + this.nome +  "ID: "+ this.identificação + ", Turma: " + this.turma;
+    }
 
     
     

@@ -44,6 +44,30 @@ public class repositorio_aluno {
         }
     }
 
+    public void alterarNotas(String matricula, String codigoDisciplina, double novaNota1, double novaNota2) throws IllegalArgumentException { /*metodo para alterar
+             as notas de um aluno, no qual é feito as exceções para verificar se é possivel alterar e também ocorre a alteração das notas*/
+      
+        alunos aluno = buscarAluno(matricula);
+        if (aluno == null) {
+            throw new IllegalArgumentException("Aluno com matrícula " + matricula + " não encontrado.");
+        }
+
+        disciplinas disciplina = null;
+        for (Map.Entry<disciplinas, registro_disciplinas> entry : aluno.getNotasPorDisciplina().entrySet()) {
+            if (entry.getKey().getCodigo().equals(codigoDisciplina)) {
+                disciplina = entry.getKey();
+                break;
+            }
+        }
+
+        if (disciplina == null) {
+            throw new IllegalArgumentException("Disciplina com código " + codigoDisciplina + " não encontrada para este aluno.");
+        }
+
+        aluno.alterarNotas(disciplina, novaNota1, novaNota2);
+        System.out.println("Notas alteradas com sucesso para o aluno " + aluno.getNome() + " na disciplina " + disciplina.getNome());
+    }
+
     //adicionar registro de notas
     public void adicionarRegistroNotas(String matricula, registro_disciplinas registro) throws IllegalArgumentException {
         alunos aluno = buscarAluno(matricula);

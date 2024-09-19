@@ -31,5 +31,12 @@ public class disciplinas {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
+
+
+    @Override
+    public String toString() {
+        return "disciplinas: "+ this.nome + ", codigo: " + this.codigo;
+    }
+    
     
 }

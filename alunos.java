@@ -91,5 +91,10 @@ public class alunos {
     public void setNotasPorDisciplina(Map<disciplinas, registro_disciplinas> notasPorDisciplina) {
         this.notasPorDisciplina = notasPorDisciplina;
     }
+    @Override
+public String toString() {
+    return "Aluno: " + this.nome + ", Matrícula: " + this.matricula;
+}
+
 
 }
