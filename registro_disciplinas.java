@@ -20,7 +20,7 @@ public class registro_disciplinas {
     }
    //excluir depois
    public double notaSemestre() {
-    return ((nota1*2) + (nota2*3)) / 5;
+    return (nota1 + nota2) / 5;
 }
 
 //metodo para a aprovação. o motivo da nota final ser -1 é para que ela não seja considerada na média do aluno, porque quando ela for calculada vai ser diferente

@@ -181,7 +181,7 @@ com switchs e cases para que o usuário possa escolher as opções do menu*/
         double notaSemestre = (nota1 + nota2) / 2;
 
         registro_disciplinas registro = new registro_disciplinas(disciplina, nota1, nota2, -1);
-        if (notaSemestre < 60) { //if para verificar se vai ser necessario prova final
+        if (notaSemestre < 60) { //if para verificar se vai ser necessario provas
             double notaFinal = lerDouble("Nota da prova final: ");
             registro.setNota_final(notaFinal);
         }
