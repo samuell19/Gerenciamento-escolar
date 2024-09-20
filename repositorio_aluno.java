@@ -45,7 +45,7 @@ public class repositorio_aluno {
     }
 
     public void alterarNotas(String matricula, String codigoDisciplina, double novaNota1, double novaNota2) throws IllegalArgumentException { /*metodo para alterar
-             as notas de um aluno, no qual é feito as exceções para verificar se é possivel alterar e também ocorre a alteração das notas*/
+             as notas de um aluno, no qual é feito as exceções para verificar se é possivel alterar e também ocorre a alteração das notas.*/
       
         alunos aluno = buscarAluno(matricula);
         if (aluno == null) {
