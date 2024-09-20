@@ -62,7 +62,7 @@ public class professores {
     }
     @Override
     public String toString() {
-        return "Professores: "  + this.nome +  "ID: "+ this.identificação + ", Turma: " + this.turma;
+        return "Professores: "  + this.nome +  "ID: "+ this.identificação;
     }
 
     
